@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV · Liam Earthman</title>
+  <meta name="description" content="Liam (William) Earthman — mathematics and physics student at UT Austin working on scientific machine learning, stochastic optimal control, and reinforcement learning.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="pages"><a href="index.html">Home</a><a href="research.html">Research</a><a href="cv.html" aria-current="page">CV</a></nav>
+  <h1>Curriculum Vitae</h1>
+  <p class="tagline">Liam Earthman · B.S. Mathematics &amp; B.S. Physics, University of Texas at Austin</p>
+  <nav class="links">
+    <a href="mailto:liamearthman2@gmail.com">Email</a>
+    <a href="https://github.com/liamearthman">GitHub</a>
+    <!-- <a href="cv.pdf">PDF</a> -->
+  </nav>
+</header>
+
+<main>
+
+
+  <section id="research">
+    <h2>Research Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Oden Institute for Computational Engineering &amp; Sciences</h3>
+        <span class="date">May 2026 – present</span>
+      </div>
+      <p class="sub">Research Intern · advised by Dr. Chandrajit Bajaj</p>
+      <ul>
+        <li>Built stochastic port-Hamiltonian control benchmarks (pendulum, cart-pole, acrobot) as Gymnasium
+          environments in (q, p) coordinates with the full mass matrix and state-dependent wind noise,
+          integrated with a stochastic Heun scheme targeting the Stratonovich solution; validated with
+          energy-conservation and strong-order convergence tests.</li>
+        <li>Designed the evaluation protocol for a controlled comparison of PHAST's Energy–Casimir controller
+          against CT-SAC and CT-TD3 under a symmetric q-only sensing constraint and an explicit information budget.</li>
+        <li>Contributed to a new structure-preserving continuous-time reinforcement learning algorithm, and
+          reformulated RL tasks in stochastic environments as stochastic optimal control problems.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Center for Particles and Fields, UT Austin</h3>
+        <span class="date">Apr 2025 – Apr 2026</span>
+      </div>
+      <p class="sub">Research Assistant · advised by Dr. Karol Lang</p>
+      <ul>
+        <li><strong>NOvA Test Beam:</strong> benchmarked ML models (scikit-learn, PyTorch) for electron energy
+          reconstruction with Optuna hyperparameter search; contributed to the MLP energy regressor now
+          integrated in NOvASoft; designed an initial dataset-flattening scheme to reduce bias toward
+          four-momentum peaks; studied physics-informed constraints on predictions.</li>
+        <li><strong>NOvA Multi-Muon Analysis:</strong> developed an algorithm to identify and classify multi-muon
+          events in the NOvA Far Detector from timing and angular correlations in cosmic pulser trigger data.</li>
+      </ul>
+      <figure class="wide">
+        <img src="assets/img/multimuon.png" alt="NOvA Far Detector event display showing many parallel muon tracks in the x and y views" loading="lazy">
+        <figcaption>A multi-muon shower in the NOvA Far Detector, flagged by the timing-based clustering algorithm.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Code</h2>
+
+    <div class="project">
+      <h3><a href="https://github.com/liamearthman/windy-continuous-time-rl-envs">windy-continuous-time-rl-envs</a></h3>
+      <p>Fork of CT-RL (CT-SAC, CT-TD3) with a custom windy pendulum environment and comparison metrics for benchmarking against PHAST.</p>
+    </div>
+
+
+    <div class="project">
+      <h3><a href="https://github.com/liamearthman/Multi-Muon-Analysis">Multi-Muon-Analysis</a></h3>
+      <p>Timing-based clustering to find multi-muon showers in the NOvA Far Detector cosmic pulser stream.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>University of Texas at Austin</h3>
+        <span class="date">Expected May 2027</span>
+      </div>
+      <p class="sub">B.S. Mathematics · B.S. Physics</p>
+      <ul>
+        <li>Graduate coursework: Stochastic Processes, Foundations of Machine Learning and Data Science (Spring 2027)</li>
+        <li>Selected coursework: Real Analysis, PDEs, Numerical Analysis, Stochastic Processes,
+          Classical Dynamics, Statistical Mechanics, Quantum Physics I–III, Electrodynamics</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <div class="pub">
+      <div class="title">Optical characterization of wavelength-shifting and scintillating-wavelength-shifting fibers</div>
+      <div class="authors"><span class="me">W. Earthman</span>, W. Bae, J. Cesar, K. Chen, J. Cho, D. Du, J. Edgar, and J. Zey</div>
+      <div class="venue"><em>Journal of Instrumentation (JINST)</em>, P01027, 2026</div>
+    </div>
+
+    <div class="pub">
+      <div class="title">Response of wavelength-shifting and scintillating-wavelength-shifting fibers to ionizing radiation</div>
+      <div class="authors"><span class="me">W. Earthman</span>, W. Bae, J. Cesar, K. Chen, J. Cho, D. Du, J. Edgar, …, and J. Zey</div>
+      <div class="venue"><em>arXiv preprint</em> arXiv:2510.15913, 2025</div>
+      <div class="plinks"><a href="https://arxiv.org/abs/2510.15913">arXiv</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Liam Earthman
+</footer>
+
+</body>
+</html>

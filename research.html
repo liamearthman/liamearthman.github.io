@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Liam Earthman</title>
+  <meta name="description" content="Research by Liam Earthman: stochastic port-Hamiltonian control, continuous-time reinforcement learning, and machine learning for the NOvA neutrino experiment.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="pages"><a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="cv.html">CV</a></nav>
+  <h1>Research</h1>
+  <p class="tagline">What I'm working on now, and what I've worked on before.</p>
+</header>
+
+<main>
+
+  <section id="current">
+    <h2>Current</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Structure-preserving control of stochastic physical systems</h3>
+        <span class="date">2026 – present</span>
+      </div>
+      <p class="sub">Oden Institute, UT Austin · with Dr. Chandrajit Bajaj</p>
+      <p>
+        Many control problems involve physical systems with known structure, such as energy and conservation
+        laws, that are also driven by noise. I study how to build controllers, both model-based and learned,
+        that keep that structure instead of discarding it.
+      </p>
+      <ul>
+        <li><strong>Neural IDA-PBC for stochastic systems</strong> <em>(current focus)</em><strong>.</strong>
+          Extending robust <a href="https://arxiv.org/abs/2409.16008">Neural IDA-PBC</a> from deterministic to
+          stochastic port-Hamiltonian systems, using generator-based Lyapunov conditions to account for both the
+          noise and the neural network's approximation error.</li>
+        <li><strong>Stochastic port-Hamiltonian benchmarks.</strong> Windy pendulum, cart-pole, and acrobot
+          environments written in (q, p) coordinates with state-dependent wind noise and a stochastic Heun
+          integrator for the Stratonovich solution.</li>
+        <li><strong>Learned vs. physics-based control.</strong> A controlled comparison of PHAST's
+          Energy–Casimir controller against continuous-time RL (CT-SAC, CT-TD3) under the same partial
+          observations and an explicit information budget.</li>
+        <li><strong>Structure-preserving continuous-time RL.</strong> Recasting RL in stochastic environments
+          as stochastic optimal control, and developing an RL algorithm that respects the underlying
+          Hamiltonian structure.</li>
+      </ul>
+      <p class="plinks">
+        <a href="https://github.com/liamearthman/windy-continuous-time-rl-envs">windy-continuous-time-rl-envs</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="past">
+    <h2>Past</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Multi-muon showers in the NOvA Far Detector</h3>
+        <span class="date">2025 – 2026</span>
+      </div>
+      <p class="sub">Center for Particles and Fields, UT Austin · with Dr. Karol Lang</p>
+      <p>
+        Cosmic-ray air showers can send many muons through the NOvA Far Detector at once. I developed a
+        timing- and angle-based clustering algorithm to pick these multi-muon events out of the cosmic
+        pulser data stream, as a first step toward studying how their rate varies with the seasons.
+      </p>
+      <figure>
+        <img src="assets/img/multimuon.png" alt="NOvA Far Detector event display showing many parallel muon tracks in the x and y views" loading="lazy">
+        <figcaption>A multi-muon shower flagged by the clustering algorithm.</figcaption>
+      </figure>
+      <p class="plinks"><a href="https://github.com/liamearthman/Multi-Muon-Analysis">Multi-Muon-Analysis</a></p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Machine learning for energy reconstruction at the NOvA Test Beam</h3>
+        <span class="date">2025 – 2026</span>
+      </div>
+      <p class="sub">Center for Particles and Fields, UT Austin · with Dr. Karol Lang</p>
+      <p>
+        I benchmarked machine-learning models for reconstructing electron energies and helped validate the
+        MLP energy regressor that is now part of NOvASoft. I also designed a dataset-flattening scheme to
+        keep training from being biased toward peaks in the energy spectrum.
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Liam Earthman
+</footer>
+
+</body>
+</html>

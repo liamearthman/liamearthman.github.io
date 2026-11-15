@@ -1,0 +1,180 @@
+:root {
+  --bg: #fdfcfa;
+  --fg: #1d1d1f;
+  --muted: #5f6368;
+  --rule: #e4e1dc;
+  --accent: #b5532a; /* burnt orange, a nod to UT */
+  --max: 46rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141414;
+    --fg: #e8e6e3;
+    --muted: #9aa0a6;
+    --rule: #2c2c2c;
+    --accent: #e08a5e;
+  }
+}
+
+* { box-sizing: border-box; }
+html { font-size: 17px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+main, header.site, footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+header.site {
+  padding-top: 3.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+header.site h1 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.25rem;
+}
+.tagline { color: var(--muted); margin: 0 0 1rem; }
+nav.links {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+section { padding: 1.75rem 0 0.5rem; }
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+h3 { font-size: 1.05rem; font-weight: 600; margin: 0; }
+
+.entry { margin-bottom: 1.6rem; }
+.entry-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 1rem; flex-wrap: wrap;
+}
+.date {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  white-space: nowrap;
+}
+.sub { color: var(--muted); font-style: italic; margin: 0.1rem 0 0.4rem; }
+.entry ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+.entry li { margin-bottom: 0.3rem; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.45rem; padding: 0; margin: 0; list-style: none; }
+.tags li {
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.85rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.pub { margin-bottom: 1.1rem; }
+.pub .title { font-weight: 600; }
+.pub .authors, .pub .venue { color: var(--muted); font-size: 0.93rem; }
+.pub .venue em { font-style: italic; }
+.pub .plinks {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+}
+.me { color: var(--fg); font-weight: 600; }
+
+.project { margin-bottom: 1.1rem; }
+.project p { margin: 0.2rem 0 0; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@media (max-width: 520px) {
+  html { font-size: 16px; }
+  header.site { padding-top: 2.25rem; }
+  header.site h1 { font-size: 1.75rem; }
+}
+
+/* Figures */
+figure { margin: 1rem 0 0; }
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #fff;
+}
+figcaption {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin-top: 0.45rem;
+}
+.figrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  align-items: start;
+}
+@media (max-width: 620px) {
+  .figrow { grid-template-columns: 1fr; }
+}
+
+/* Page nav (Home / CV) */
+nav.pages {
+  display: flex; gap: 1.1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  margin-bottom: 1.6rem;
+}
+nav.pages a { color: var(--muted); }
+nav.pages a[aria-current="page"] { color: var(--fg); font-weight: 600; }
+
+/* Notes list */
+.note { margin-bottom: 1.2rem; }
+.note p { margin: 0.15rem 0 0; }
+.empty { color: var(--muted); font-style: italic; }
+
+/* Home: About | Research Interests side by side */
+.twocol {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+ul.interests { list-style: none; margin: 0; padding: 0; }
+ul.interests li {
+  padding: 0.35rem 0 0.35rem 0.8rem;
+  border-left: 2px solid var(--accent);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+@media (max-width: 680px) {
+  .twocol { grid-template-columns: 1fr; gap: 0; }
+}
+.entry > p { margin: 0.3rem 0 0.5rem; }
+.entry .plinks { margin-top: 0.6rem; }
